@@ -1,11 +1,11 @@
-
 import Foundation
+import Vision
 
 @objc(VisionCameraBase64Plugin)
-public class VisionCameraBase64Plugin: NSObject, FrameProcessorPluginBase {
-    private static let context = CIContext(options: nil)
-    @objc
-    public static func callback(_ frame: Frame!, withArgs _: [Any]!) -> Any! {
+public class VisionCameraBase64Plugin: FrameProcessorPlugin {
+    var context = CIContext(options: nil)
+    
+    public override func callback(_ frame: Frame, withArguments arguments: [AnyHashable: Any]?) -> Any! {
         guard let imageBuffer = CMSampleBufferGetImageBuffer(frame.buffer) else {
           print("Failed to get CVPixelBuffer!")
           return nil

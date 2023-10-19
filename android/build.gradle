@@ -20,11 +20,11 @@ if (isNewArchitectureEnabled()) {
 }
 
 def getExtOrDefault(name) {
-  return rootProject.ext.has(name) ? rootProject.ext.get(name) : project.properties["VisionCameraBase64_" + name]
+  return rootProject.ext.has(name) ? rootProject.ext.get(name) : project.properties["VisionCameraBase64Plugin_" + name]
 }
 
 def getExtOrIntegerDefault(name) {
-  return rootProject.ext.has(name) ? rootProject.ext.get(name) : (project.properties["VisionCameraBase64_" + name]).toInteger()
+  return rootProject.ext.has(name) ? rootProject.ext.get(name) : (project.properties["VisionCameraBase64Plugin_" + name]).toInteger()
 }
 
 android {
@@ -70,7 +70,7 @@ dependencies {
 if (isNewArchitectureEnabled()) {
   react {
     jsRootDir = file("../src/")
-    libraryName = "VisionCameraBase64"
-    codegenJavaPackageName = "com.visioncamerabase64"
+    libraryName = "VisionCameraBase64Plugin"
+    codegenJavaPackageName = "com.VisionCameraBase64Plugin"
   }
 }

@@ -1,5 +1,15 @@
 #import <Foundation/Foundation.h>
-#import <VisionCamera/FrameProcessorPlugin.h>
+#import "VisionCameraBase64Plugin.h"
 
-@interface VISION_EXPORT_SWIFT_FRAME_PROCESSOR(frameToBase64, VisionCameraBase64Plugin)
+#import "VisionCameraBase64Plugin-Swift.h"
+
+@implementation RegisterPlugins
+
+    + (void) load {
+        [FrameProcessorPluginRegistry addFrameProcessorPlugin:@"frameToBase64"
+                                              withInitializer:^FrameProcessorPlugin*(NSDictionary* options) {
+            return [[VisionCameraBase64Plugin alloc] init];
+        }];
+    }
+
 @end

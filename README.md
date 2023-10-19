@@ -1,4 +1,4 @@
-# vision-camera-base64
+# vision-camera-trustee-base64
 
 A simple VisionCamera FrameProcessor plugin. 
 Convert the frame to base64 string format.
@@ -8,24 +8,13 @@ __Note:__ This plugin is only string and not include `data:image/blabla/;base64,
 ## Installation
 
 ```sh
-npm install vision-camera-base64
-```
-
-Add this line to `babel.config.js`
-
-```json
-[
-    'react-native-reanimated/plugin',
-    {
-        globals: ['__frameToBase64'],
-    },
-],
+yarn add vision-camera-trustee-base64
 ```
 
 ## Usage
 
 ```js
-import { frameToBase64 } from 'vision-camera-base64';
+import { frameToBase64 } from 'vision-camera-trustee-base64';
 
 // ...
 const process = useFrameProcessor((frame) => {
