@@ -1,6 +1,6 @@
 {
-  "name": "vision-camera-trustee-base64",
-  "version": "2.2.3",
+  "name": "vision-camera-base64-v3",
+  "version": "2.2.5",
   "description": "A simple VisionCamera FrameProcessor plugin. Convert the frame to base64 string format",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
