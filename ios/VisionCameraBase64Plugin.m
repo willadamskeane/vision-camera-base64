@@ -3,7 +3,7 @@
 
 #import "VisionCameraBase64Plugin-Swift.h"
 
-@implementation RegisterPlugins
+@implementation Plugins
 
     + (void) load {
         [FrameProcessorPluginRegistry addFrameProcessorPlugin:@"frameToBase64"

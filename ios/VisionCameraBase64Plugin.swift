@@ -1,5 +1,5 @@
 import Foundation
-import Vision
+import VisionCamera
 
 @objc(VisionCameraBase64Plugin)
 public class VisionCameraBase64Plugin: FrameProcessorPlugin {

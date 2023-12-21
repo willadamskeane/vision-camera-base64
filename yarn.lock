@@ -2548,7 +2548,7 @@
     "@react-native/virtualized-lists" "^0.72.4"
     "@types/react" "*"
 
-"@types/react@*", "@types/react@17.0.21":
+"@types/react@*":
   version "17.0.21"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.21.tgz#069c43177cd419afaab5ce26bb4e9056549f7ea6"
   integrity sha512-GzzXCpOthOjXvrAUFQwU/svyxu658cwu00Q9ugujS4qc1zXgLFaO0kS2SLOaMWLt2Jik781yuHCWB7UcYdGAeQ==
@@ -7980,10 +7980,10 @@ react-native-builder-bob@^0.21.3:
   optionalDependencies:
     jetifier "^2.0.0"
 
-react-native-vision-camera@^3.0.0:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/react-native-vision-camera/-/react-native-vision-camera-3.4.1.tgz#33b19a2fc89b8169c1839cddc9c12d1f0bcc9cd5"
-  integrity sha512-MOVmkNnQl40ROSDXd+RwF18lacJX8CsRZRcKnEJGZ3VtX4fAM1fd+C1I9PxIu7lWiyqDa6SU7EKu8NDb4Tu1VA==
+react-native-vision-camera@^3.5.1:
+  version "3.6.17"
+  resolved "https://registry.yarnpkg.com/react-native-vision-camera/-/react-native-vision-camera-3.6.17.tgz#5946589b0a1920dcfcc9bdffb6d2e98dad4ff4ce"
+  integrity sha512-dzkO6l6lqw48i2jQre4AXzuFZqEEzqEEVc8bfOqF4MZ/6PzdHtfjosWea0zuEdsiW13DhaFHf7XLh/+aKytx2w==
 
 react-native-worklets-core@^0.2.0:
   version "0.2.2"
