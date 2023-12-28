@@ -6,6 +6,8 @@ import com.mrousavy.camera.frameprocessor.Frame;
 import com.mrousavy.camera.frameprocessor.FrameProcessorPlugin;
 import java.util.Map;
 
+import com.google.mlkit.vision.common.InputImage;
+
 import android.media.Image;
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
@@ -23,7 +25,11 @@ public class VisionCameraBase64Plugin extends FrameProcessorPlugin {
     Bitmap.CompressFormat imageFormat = Bitmap.CompressFormat.PNG;
     int quality = 100;
 
-    Bitmap bitmap = BitmapUtils.getBitmap(frame);
+    Image mediaImage = frame.getImage();
+
+    InputImage image = InputImage.fromMediaImage(mediaImage, BitmapUtils.convertRotationDegreeFromString(frame.getOrientation()));
+
+    Bitmap bitmap = BitmapUtils.convertImageToBitmap(image);
     return bitmapToBase64(bitmap, imageFormat, quality);
   }
 

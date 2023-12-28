@@ -7,7 +7,7 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewManager;
 import com.mrousavy.camera.frameprocessor.FrameProcessorPlugin;
 import com.mrousavy.camera.frameprocessor.FrameProcessorPluginRegistry;
-import com.visioncamerabase64.VisionCameraBase64Plugin;
+import com.visioncamerabase64plugin.VisionCameraBase64Plugin;
 
 import java.util.Collections;
 import java.util.List;
