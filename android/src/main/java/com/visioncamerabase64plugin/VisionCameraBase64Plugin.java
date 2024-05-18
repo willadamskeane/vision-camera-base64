@@ -5,6 +5,12 @@ import androidx.annotation.Nullable;
 import com.mrousavy.camera.frameprocessors.Frame;
 import com.mrousavy.camera.frameprocessors.FrameProcessorPlugin;
 import java.util.Map;
+import java.nio.ByteBuffer;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 
 import android.media.Image;
 import android.annotation.SuppressLint;
