@@ -15,8 +15,7 @@ import java.util.List;
 public class VisionCameraBase64PluginPackage implements ReactPackage {
  static {
     FrameProcessorPluginRegistry.addFrameProcessorPlugin(
-            "frameToBase64",
-            (proxy, context) -> new VisionCameraBase64Plugin(proxy)
+            "frameToBase64", VisionCameraBase64Plugin::new
     );
   }
 
