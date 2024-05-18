@@ -19,7 +19,7 @@ public class VisionCameraBase64Plugin extends FrameProcessorPlugin {
     return BitmapUtils.convertYuvToRgba(frame.getImage());
   }
 
-  VisionCameraBase64Plugin(@Nullable Map<String, Object> options) {
+  VisionCameraBase64Plugin(VisionCameraProxy proxy, @Nullable Map<String, Object> options) {
     super(options);
   }
 }
