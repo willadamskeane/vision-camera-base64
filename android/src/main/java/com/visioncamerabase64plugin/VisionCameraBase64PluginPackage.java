@@ -13,10 +13,13 @@ import java.util.Collections;
 import java.util.List;
 
 public class VisionCameraBase64PluginPackage implements ReactPackage {
-  static {
-    FrameProcessorPluginRegistry.addFrameProcessorPlugin("frameToBase64") { proxy,options -> new VisionCameraBase64Plugin(options) }
-    
+ static {
+    FrameProcessorPluginRegistry.addFrameProcessorPlugin(
+            "frameToBase64",
+            (proxy, options) -> new VisionCameraBase64Plugin(options)
+    );
   }
+
 
   @NonNull
   @Override
