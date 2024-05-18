@@ -1,9 +1,16 @@
 package com.visioncamerabase64plugin;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+// import androidx.annotation.NonNull;
+// import androidx.annotation.Nullable;
+
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+
 import com.mrousavy.camera.frameprocessors.Frame;
 import com.mrousavy.camera.frameprocessors.FrameProcessorPlugin;
+import com.mrousavy.camera.frameprocessors.VisionCameraProxy;
+
 import java.util.Map;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
