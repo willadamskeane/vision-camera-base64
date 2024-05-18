@@ -20,6 +20,6 @@ public class VisionCameraBase64Plugin extends FrameProcessorPlugin {
   }
 
   VisionCameraBase64Plugin(VisionCameraProxy proxy, @Nullable Map<String, Object> options) {
-    super(options);
+    super();
   }
 }
