@@ -27,7 +27,7 @@ public class VisionCameraBase64Plugin extends FrameProcessorPlugin {
   @SuppressLint("NewApi")
   @Nullable
   @Override
-  public Object callback(@NonNull Frame frame) {
+  public Object callback(@NonNull Frame frame, @Nullable Map<String, Object> params) {
     // TODO: image format and quality must come from params
     return BitmapUtils.convertYuvToRgba(frame.getImage());
   }
