@@ -9,6 +9,8 @@ import org.jetbrains.annotations.Nullable;
 import com.mrousavy.camera.frameprocessors.Frame;
 import com.mrousavy.camera.frameprocessors.FrameProcessorPlugin;
 import com.mrousavy.camera.frameprocessors.VisionCameraProxy;
+import com.mrousavy.camera.core.FrameInvalidError;
+
 
 import java.util.Map;
 import java.nio.ByteBuffer;
@@ -24,14 +26,9 @@ public class VisionCameraBase64Plugin extends FrameProcessorPlugin {
   @SuppressLint("NewApi")
   @Nullable
   @Override
-  public Object callback(@NotNull Frame frame, @Nullable Map<String, Object> params) {
-    try {
+  public Object callback(@NotNull Frame frame, @Nullable Map<String, Object> params) throws FrameInvalidError {
       // TODO: image format and quality must come from params
       return BitmapUtils.convertYuvToRgba(frame.getImage());
-    } catch (Exception e) {
-      e.printStackTrace();
-      return null;
-    }
   }
 
   VisionCameraBase64Plugin(VisionCameraProxy proxy, @Nullable Map<String, Object> options) {
