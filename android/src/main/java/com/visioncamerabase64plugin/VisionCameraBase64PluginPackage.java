@@ -16,7 +16,7 @@ public class VisionCameraBase64PluginPackage implements ReactPackage {
  static {
     FrameProcessorPluginRegistry.addFrameProcessorPlugin(
             "frameToBase64",
-            (proxy, options) -> new VisionCameraBase64Plugin(options)
+            (proxy, context) -> new VisionCameraBase64Plugin(proxy)
     );
   }
 
