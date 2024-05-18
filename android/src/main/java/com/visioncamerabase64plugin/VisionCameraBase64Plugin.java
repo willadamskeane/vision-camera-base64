@@ -7,7 +7,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import com.mrousavy.camera.frameprocessors.Frame;
-import com.mrousavy.camera.frameprocessors.FrameInvalidError;
 import com.mrousavy.camera.frameprocessors.FrameProcessorPlugin;
 import com.mrousavy.camera.frameprocessors.VisionCameraProxy;
 
@@ -29,7 +28,7 @@ public class VisionCameraBase64Plugin extends FrameProcessorPlugin {
     try {
       // TODO: image format and quality must come from params
       return BitmapUtils.convertYuvToRgba(frame.getImage());
-    } catch (FrameInvalidError e) {
+    } catch (Exception e) {
       e.printStackTrace();
       return null;
     }
