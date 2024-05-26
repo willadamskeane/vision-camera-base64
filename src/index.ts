@@ -1,14 +1,14 @@
-import { VisionCameraProxy, type Frame } from 'react-native-vision-camera';
+import { VisionCameraProxy, type Frame } from "react-native-vision-camera";
 
-const plugin = VisionCameraProxy.initFrameProcessorPlugin('frameToBase64');
+const plugin = VisionCameraProxy.initFrameProcessorPlugin("frameToBase64");
 
-export function toBase64(frame: Frame): object {
-  'worklet';
+export function toBase64(frame: Frame, params: object): object {
+  "worklet";
 
   if (plugin == null) {
     throw new Error('Failed to load Frame Processor Plugin "frameToBase64"!');
   }
 
   // @ts-ignore
-  return plugin?.call(frame);
+  return plugin?.call(frame, params);
 }
