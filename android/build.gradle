@@ -34,6 +34,16 @@ android {
     minSdkVersion getExtOrIntegerDefault("minSdkVersion")
     targetSdkVersion getExtOrIntegerDefault("targetSdkVersion")
     buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
+<<<<<<< HEAD
+=======
+
+    // Add the following lines to include the native library
+    externalNativeBuild {
+      cmake {
+        cppFlags ""
+      }
+    }
+>>>>>>> 00b7aa5 (merge)
   }
   buildTypes {
     release {
@@ -50,6 +60,14 @@ android {
     targetCompatibility JavaVersion.VERSION_1_8
   }
 
+<<<<<<< HEAD
+=======
+  externalNativeBuild {
+    cmake {
+      path "src/main/cpp/ByteTrack/CMakeLists.txt"
+    }
+  }
+>>>>>>> 00b7aa5 (merge)
 }
 
 repositories {
@@ -65,6 +83,12 @@ dependencies {
   implementation "com.facebook.react:react-native:+"  // From node_modules
   api project(":react-native-vision-camera")
   implementation "androidx.camera:camera-core:1.1.0-alpha06"
+<<<<<<< HEAD
+=======
+  
+  // Add OpenCV dependency
+  // implementation "com.quickbirdstudios:opencv-contrib:4.5.3.0"
+>>>>>>> 00b7aa5 (merge)
 }
 
 if (isNewArchitectureEnabled()) {
@@ -74,3 +98,8 @@ if (isNewArchitectureEnabled()) {
     codegenJavaPackageName = "com.VisionCameraBase64Plugin"
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 00b7aa5 (merge)
